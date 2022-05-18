@@ -8,9 +8,13 @@ const CategoryController = require('../controllers/CategoryController')
 const router = express.Router();
 
 // Generamos rutas enlazadas con sus respectivos metodos de su controller
-router.post('/createTable', CategoryController.createTable)
+router.post('/createTable', CategoryController.createTable);
+router.post('/add/:name', CategoryController.add);
+router.post('/updateById/:id', CategoryController.updateByID); //! No he logrado que funcione con .put
+router.post('/getAll', CategoryController.getAll); //! No he logrado que funcione con el .get
 
-//* Aqui dentro faltan las rutas
+
+//TODO seleccionar categoria por id
 
 
 // Exportamos el modulo para poder utilizarlo en el index

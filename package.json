@@ -1,0 +1,31 @@
+{
+    "name": "tb_22_express-sql",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MrSetOne/TB_22_express-sql.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MrSetOne/TB_22_express-sql/issues"
+    },
+    "homepage": "https://github.com/MrSetOne/TB_22_express-sql#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.18.1",
+        "logplease": "^1.2.15",
+        "mysql2": "^2.3.3"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.16"
+    }
+}

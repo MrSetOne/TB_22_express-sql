@@ -43,8 +43,15 @@ const CategoryController = {
             logger.succes.log('Se ha descargado toda la base de datos de categorias');
             res.status(200).send(result)
         })
+    },
+    getById(req, res) {
+        let sql = `SELECT * FROM categories WHERE id = ${req.params.id}`
+        db.query(sql, (err, result) => {
+            if (err) throw err;
+            logger.succes.log(`Se ha descargado la categoria con id: ${req.params.id}`);
+            res.status(200).send(result)
+        })
     }
-
 }
 
 

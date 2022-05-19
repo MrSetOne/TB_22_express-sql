@@ -54,6 +54,38 @@ const ProductController = {
             logger.succes.log('Se ha descargado la base de datos de juegos con sus categorias');
             res.status(200).send(result)
         })
+    },
+    getById(req, res) {
+        let sql = `SELECT * FROM products WHERE id=${req.params.id};`
+        db.query(sql, (err, result) => {
+            if (err) throw err;
+            logger.succes.log(`Se ha descargado el producto con id: ${req.params.id}`);
+            res.status(200).send(result)
+        })
+    },
+    getAllDesc(req, res) {
+        let sql = `SELECT * FROM products ORDER BY id DESC;`;
+        db.query(sql, (err, result) => {
+            if (err) throw err;
+            logger.succes.log('Se ha descargado toda la base de datos de productos en orden descendiente');
+            res.status(200).send(result)
+        })
+    },
+    getByName(req, res) {
+        let sql = `SELECT * FROM products WHERE  name_product  LIKE '%${req.body.name}%';`;
+        db.query(sql, (err, result) => {
+            if (err) throw err;
+            logger.succes.log(`Se han descargado los productos que contienen ${req.body.name}`);
+            res.status(200).send(result)
+        })
+    },
+    deleteById(req, res) {
+        let sql = `DELETE FROM products WHERE id = ${req.params.id};`
+        db.query(sql, (err, result) => {
+            if (err) throw err;
+            logger.succes.log(`Se ha eliminado el producto con id: ${req.body.name}`);
+            res.status(200).send(result)
+        })
     }
 
 

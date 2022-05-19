@@ -12,10 +12,7 @@ router.post('/createTable', CategoryController.createTable);
 router.post('/add/:name', CategoryController.add);
 router.put('/updateById/:id', CategoryController.updateByID);
 router.get('/getAll', CategoryController.getAll);
-
-
-//TODO seleccionar categoria por id
-
+router.get('/getById/:id', CategoryController.getById);
 
 // Exportamos el modulo para poder utilizarlo en el index
 module.exports = router

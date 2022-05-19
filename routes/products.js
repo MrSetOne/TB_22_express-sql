@@ -13,12 +13,10 @@ router.post('/add', ProductController.add);
 router.put('/updateById/:id', ProductController.updateById);
 router.get('/getAll', ProductController.getAll);
 router.get('/getCategories', ProductController.getCategories);
-
-//TODO seleccionar producto por ID
-//TODO mostrar productos forma descendiente
-//TODO buscar producto por su nombre
-//TODO eliminar producto por id
-
+router.get('/getById/:id', ProductController.getById);
+router.get('/getAllDesc', ProductController.getAllDesc);
+router.get('/getByName', ProductController.getByName);
+router.delete('/delete/:id', ProductController.deleteById);
 
 // Exportamos el modulo para poder utilizarlo en el index
 module.exports = router
